@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .sidebar {
+            height: 100vh;
+            background-color: #ffffff;
+            border-right: 1px solid #ddd;
+            padding: 20px;
+        }
+        .sidebar a {
+            color: #333;
+            text-decoration: none;
+            display: block;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+        .sidebar a:hover {
+            color: #007bff;
+        }
+        .content {
+            padding: 20px;
+        }
+        .search-bar {
+            margin-bottom: 20px;
+        }
+        .btn-icon {
+            padding: 6px 10px;
+            font-size: 14px;
+        }
+        .table-actions button {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3 sidebar">
+                <div class="text-center mb-4">
+                    <h5>Administrator</h5>
+                    <p>admin@edoc.com</p>
+                    <button class="btn btn-light btn-sm">Log Out</button>
+                </div>
+                <a href="#">📊 Dashboard</a>
+                <a href="#">👨‍⚕ Doctors</a>
+                <a href="#">⏰ Schedule</a>
+                <a href="#">📖 Appointment</a>
+                <a href="#">👥 Patients</a>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-9 content">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <button class="btn btn-link">⬅ Back</button>
+                    <div class="d-flex align-items-center">
+                        <input type="text" class="form-control form-control-sm" placeholder="Search Doctor name or Email">
+                        <button class="btn btn-primary btn-sm ms-2">Search</button>
+                    </div>
+                    <div class="text-end">
+                        <p class="mb-1">Today's Date</p>
+                        <h6 class="mb-0">2022-06-03</h6>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-primary btn-sm">+ Add New</button>
+                </div>
+
+                <!-- Doctor List -->
+                <h5>Add New Doctor</h5>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Doctor Name</th>
+                            <th>Email</th>
+                            <th>Specialties</th>
+                            <th>Events</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Test Doctor</td>
+                            <td>doctor@edoc.com</td>
+                            <td>Accident and Emergency</td>
+                            <td class="table-actions">
+                                <button class="btn btn-sm btn-secondary btn-icon">Edit</button>
+                                <button class="btn btn-sm btn-info btn-icon">View</button>
+                                <button class="btn btn-sm btn-danger btn-icon">Remove</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
